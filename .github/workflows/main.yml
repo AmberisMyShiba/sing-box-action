@@ -28,13 +28,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          repository: yaotthaha/sing-box-pub
-          ref: dev-yaott
-      - name: with_clash_ui
-        id: dashboard
-        run: |  
-          git submodule init
-          git submodule update
+          repository: SagerNet/sing-box
+          ref: dev-next
       - name: Get latest go version
         id: version
         run: |
@@ -179,7 +174,7 @@ jobs:
       GOARM: ${{ matrix.goarm }}
       GOMIPS: ${{ matrix.gomips }}
       CGO_ENABLED: 0
-      TAGS: with_gvisor,with_quic,with_wireguard,with_clash_api,with_acme,with_proxyprovider,with_clash_ui,with_utls
+      TAGS: with_gvisor,with_quic,with_wireguard,with_clash_api,with_acme,with_utls
     steps:
       - name: Set variables
         run: |
@@ -189,13 +184,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          repository: yaotthaha/sing-box-pub
-          ref: dev-next-yaott
-      - name: with_clash_ui
-        id: dashboard
-        run: |  
-          git submodule init
-          git submodule update
+          repository: SagerNet/sing-box
+          ref: dev-next
       - name: Get latest go version
         id: version
         run: |
