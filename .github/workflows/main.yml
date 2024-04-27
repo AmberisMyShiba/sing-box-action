@@ -81,8 +81,6 @@ jobs:
             goos: linux
             goarch: amd64
             goamd64: v3
-          - name: linux-386
-            goos: linux
 
           # darwin
           - name: darwin-amd64
