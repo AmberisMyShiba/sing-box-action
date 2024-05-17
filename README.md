@@ -1,0 +1,2 @@
+default tags for build
+with_gvisor,with_clash_api,with_grpc,with_utls,with_ech,with_reality_server,with_quic,with_wireguard,with_acme
