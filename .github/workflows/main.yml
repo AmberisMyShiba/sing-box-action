@@ -25,10 +25,10 @@ jobs:
 #          echo "RELEASE_NAME=Released on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
 #          echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
       - name: Create tag_counter.txt if not exists
-      run: |
-        if [ ! -f tag_counter.txt ]; then
-          touch tag_counter.txt
-        fi
+        run: |
+          if [ ! -f tag_counter.txt ]; then
+            touch tag_counter.txt
+          fi
       - name: Set variables
         id: set_variables
         run: |
